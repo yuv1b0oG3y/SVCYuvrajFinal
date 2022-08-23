@@ -95,8 +95,9 @@ milleniumFalconTwo.addImage(milleniumFalconTwoIMG);
 milleniumFalconTwo.scale = 0.8;
 milleniumFalconTwo.visible = false;
 
-bgMusic.play();
-bgMusic.loop();
+  //This music doesnt work at all
+//bgMusic.play();
+//bgMusic.loop();
 }
 
 
@@ -383,18 +384,20 @@ else if (gameState == "levelThree") {
 }
 
   else if(gameState == 'LOSS') {
+    //THIS Music keeps on repeating itself in every frame
     bgMusic.stop();
-    lossMusic.play();
-    lossMusic.loop();
+    //lossMusic.play();
+    //lossMusic.loop();
     tatooine.destroy();
     milleniumFalcon.destroy();
     milleniumFalconTwo.destroy();
   }
 
   else if(gameState == 'WIN') {
+    //THIS Music keeps on repeating itself in every frame
     bgMusic.stop();
-    winMusic.play();
-    winMusic.play();
+    //winMusic.play();
+    //winMusic.loop();
     background(winIMG);
     tatooine.destroy();
     milleniumFalcon.destroy();
