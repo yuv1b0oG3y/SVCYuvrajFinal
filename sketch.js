@@ -134,10 +134,6 @@ if(back.mousePressed(()=>{
       enemyShipNewGroup[i].destroy();
   }
 
-  milleniumFalcon.destroy()
-  tatooine.destroy()
-  milleniumFalconTwo.destroy()
-
   for(var i = 0; i<imperialTroops.length; i++) {
     imperialTroops[i].destroy();
 }
