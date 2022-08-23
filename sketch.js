@@ -99,10 +99,12 @@ bgMusic.play();
 bgMusic.loop();
 
 if(gameState == 'LOSS') {
+  bgMusic.stop();
   lossMusic.play();
   lossMusic.loop();
 }
 if(gameState == 'WIN') {
+  bgMusic.stop();
   winMusic.play();
   winMusic.play();
 }
