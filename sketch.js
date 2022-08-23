@@ -95,19 +95,8 @@ milleniumFalconTwo.addImage(milleniumFalconTwoIMG);
 milleniumFalconTwo.scale = 0.8;
 milleniumFalconTwo.visible = false;
 
-//bgMusic.play();
+bgMusic.play();
 bgMusic.loop();
-
-if(gameState == 'LOSS') {
-  bgMusic.stop();
-  //lossMusic.play();
-  lossMusic.loop();
-}
-if(gameState == 'WIN') {
-  bgMusic.stop();
-  //winMusic.play();
-  winMusic.play();
-}
 }
 
 
@@ -394,12 +383,18 @@ else if (gameState == "levelThree") {
 }
 
   else if(gameState == 'LOSS') {
+    bgMusic.stop();
+    lossMusic.play();
+    lossMusic.loop();
     tatooine.destroy();
     milleniumFalcon.destroy();
     milleniumFalconTwo.destroy();
   }
 
   else if(gameState == 'WIN') {
+    bgMusic.stop();
+    winMusic.play();
+    winMusic.play();
     background(winIMG);
     tatooine.destroy();
     milleniumFalcon.destroy();
