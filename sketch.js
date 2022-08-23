@@ -95,17 +95,17 @@ milleniumFalconTwo.addImage(milleniumFalconTwoIMG);
 milleniumFalconTwo.scale = 0.8;
 milleniumFalconTwo.visible = false;
 
-bgMusic.play();
+//bgMusic.play();
 bgMusic.loop();
 
 if(gameState == 'LOSS') {
   bgMusic.stop();
-  lossMusic.play();
+  //lossMusic.play();
   lossMusic.loop();
 }
 if(gameState == 'WIN') {
   bgMusic.stop();
-  winMusic.play();
+  //winMusic.play();
   winMusic.play();
 }
 }
