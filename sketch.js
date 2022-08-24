@@ -94,14 +94,11 @@ milleniumFalconTwo = createSprite(width/2,height-100,30,30);
 milleniumFalconTwo.addImage(milleniumFalconTwoIMG);
 milleniumFalconTwo.scale = 0.8;
 milleniumFalconTwo.visible = false;
-
-  //This music doesnt work at all
-bgMusic.play();
-bgMusic.loop();
 }
 
 
 function draw(){
+  playMusic();
   milleniumFalconTwo.setCollider('rectangle', 0.1, 0.1, 0.1, 0.1);
     fill("gold");
     textSize(25);
@@ -695,3 +692,36 @@ function createNewShip() {
       }
   }
   }
+
+function playMusic() {
+  if(gameState == 'wait') {
+    bgMusic.stop();
+    bgMusic.play();
+    bgMusic.loop();
+  }
+  if(gameState == 'levelOne') {
+        bgMusic.stop();
+    bgMusic.play();
+    bgMusic.loop();
+  }
+  if(gameState == 'levelTwo') {
+        bgMusic.stop();
+    bgMusic.play();
+    bgMusic.loop();
+  }
+  if(gameState == 'levelThree') {
+        bgMusic.stop();
+    bgMusic.play();
+    bgMusic.loop();
+  }
+    if(gameState == 'about') {
+          bgMusic.stop();
+    bgMusic.play();
+    bgMusic.loop();
+  }
+    if(gameState == 'how') {
+          bgMusic.stop();
+    bgMusic.play();
+    bgMusic.loop();
+  }
+}
