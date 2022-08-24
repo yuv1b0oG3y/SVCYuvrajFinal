@@ -96,8 +96,8 @@ milleniumFalconTwo.scale = 0.8;
 milleniumFalconTwo.visible = false;
 
   //This music doesnt work at all
-//bgMusic.play();
-//bgMusic.loop();
+bgMusic.play();
+bgMusic.loop();
 }
 
 
@@ -380,20 +380,12 @@ else if (gameState == "levelThree") {
 }
 
   else if(gameState == 'LOSS') {
-    //THIS Music keeps on repeating itself in every frame
-    bgMusic.stop();
-    //lossMusic.play();
-    //lossMusic.loop();
     tatooine.destroy();
     milleniumFalcon.destroy();
     milleniumFalconTwo.destroy();
   }
 
   else if(gameState == 'WIN') {
-    //THIS Music keeps on repeating itself in every frame
-    bgMusic.stop();
-    //winMusic.play();
-    //winMusic.loop();
     background(winIMG);
     tatooine.destroy();
     milleniumFalcon.destroy();
@@ -509,6 +501,9 @@ function createNewShip() {
       tatooine.destroy();
       milleniumFalcon.destroy();
       milleniumFalconTwo.destroy();
+             bgMusic.stop();
+       lossMusic.play();
+       lossMusic.loop();
         swal({
           title: `Game Over!`,
           text: "you lost, loser.",
@@ -565,6 +560,9 @@ function createNewShip() {
         rocks[i].destroy();
       }
       gameState = 'LOSS';
+       bgMusic.stop();
+       lossMusic.play();
+       lossMusic.loop();
         swal({
         title: `Game Over!`,
         text: "you lost, loser.",
@@ -583,6 +581,9 @@ function createNewShip() {
   
   function WIN() {
     if (life > 0 && score >= 1000) {
+       bgMusic.stop();
+       winMusic.play();
+       winMusic.loop();
       tatooine.destroy();
       milleniumFalcon.destroy();
       milleniumFalconTwo.destroy();
@@ -639,6 +640,9 @@ function createNewShip() {
   
     else if (life == 0) {
       gameState = 'LOSS';
+       bgMusic.stop();
+       lossMusic.play();
+       lossMusic.loop();
       for(var i = 0; i<enemyShipNewGroup.length; i++) {
           enemyShipNewGroup[i].destroy();
       }
