@@ -98,7 +98,9 @@ milleniumFalconTwo.visible = false;
 
 
 function draw(){
-  playMusic();
+  if(frameCount % 1740 == 0) {
+        bgMusic.play();
+  }
   milleniumFalconTwo.setCollider('rectangle', 0.1, 0.1, 0.1, 0.1);
     fill("gold");
     textSize(25);
@@ -692,36 +694,3 @@ function createNewShip() {
       }
   }
   }
-
-function playMusic() {
-  if(gameState == 'wait') {
-    bgMusic.stop();
-    bgMusic.play();
-    bgMusic.loop();
-  }
-  if(gameState == 'levelOne') {
-        bgMusic.stop();
-    bgMusic.play();
-    bgMusic.loop();
-  }
-  if(gameState == 'levelTwo') {
-        bgMusic.stop();
-    bgMusic.play();
-    bgMusic.loop();
-  }
-  if(gameState == 'levelThree') {
-        bgMusic.stop();
-    bgMusic.play();
-    bgMusic.loop();
-  }
-    if(gameState == 'about') {
-          bgMusic.stop();
-    bgMusic.play();
-    bgMusic.loop();
-  }
-    if(gameState == 'how') {
-          bgMusic.stop();
-    bgMusic.play();
-    bgMusic.loop();
-  }
-}
