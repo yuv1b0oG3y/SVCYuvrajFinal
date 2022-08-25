@@ -97,6 +97,7 @@ milleniumFalconTwo.visible = false;
   
 bgMusic.play();
 bgMusic.loop();
+bgMusic.setVolume(.8);
 }
 
 
