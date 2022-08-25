@@ -94,6 +94,9 @@ milleniumFalconTwo = createSprite(width/2,height-100,30,30);
 milleniumFalconTwo.addImage(milleniumFalconTwoIMG);
 milleniumFalconTwo.scale = 0.8;
 milleniumFalconTwo.visible = false;
+  
+bgMusic.play();
+bgMusic.loop();
 }
 
 
