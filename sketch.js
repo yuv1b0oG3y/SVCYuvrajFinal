@@ -56,21 +56,21 @@ winMusic = loadSound('JEDI.mp3');
 
 function setup(){
 createCanvas(windowWidth,windowHeight)
-
+  
 play=createImg("play.png")
 play.position(width/2-180,height/2+height/8)
 play.size(350,350)
 
 back=createImg("Back.png")
-back.position(-40, height-195)
+back.position(-40, height-195-50)
 back.size(300,300)
 back.hide()
 
 about=createImg("about.png")
-about.position(-35, 380)
+about.position(-35, 380-50)
 
 how=createImg('how.png') 
-how.position(width/2+550, 350)
+how.position(width/2+550, 350-50)
 how.size(700, 700)
 
 howpop = createSprite(width/2,height/2)
